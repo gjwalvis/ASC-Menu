@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "com.wASCMenu"
+        versionCode = "30"
+        version     = "0.3.0" >
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>ASC Menu</name>
+
+    <description>
+        Atlantis Sport Club Menu
+    </description>
+
+    <author href="https://www.namibtec.com" email="gjensen@namibtec.com">
+        Gerard Jensen
+    </author>
+    
+    <!-- Preferences -->
+    
+    <!-- Settings for iOS -->
+
+    <preference name="ios-statusbarstyle" value="black-opaque" />
+    
+    <!-- General Preferences -->
+    
+    <preference name="splash-screen-duration" value="10000" />
+    <icon src="ascicon.png" />
+    <gap:splash src="ascsplash.png" />
+
+</widget>
