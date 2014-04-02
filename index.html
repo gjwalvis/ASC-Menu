@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+
+<html manifest="/cache.manifest">
+ <head>
+  <title>ASC Menu</title>
+    <meta charset="utf-8" />
+    <!--viewport meta tag species that the page
+     will be limited to device screen width -->
+    <meta name="viewport" content="user-scalable=no, width=device-width">
+
+    <!-- Settings for iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="apple-touch-icon" href="./ascavatar.png" />
+
+    <!--CSS-->
+    <link rel="stylesheet" href="./jquery.mobile-1.4.2.css"/>
+
+    <!--jQuery Core Library -->
+    <script type="text/javascript" src="./jquery-1.11.0.min.js"></script>
+
+    <!--jQuery Mobile Library -->
+    <script type="text/javascript" src="./jquery.mobile-1.4.2.min.js"></script>
+
+    <style><!-- Adds styles for ASC Menu App -->
+    html {
+           background: url(./images/black.png) repeat;
+           height: 100%;
+         }
+    body {
+           background: url(./images/black.png) repeat;
+           min-height: 100%;
+         }
+    </style>
+
+ </head>
+
+ <body>
+
+<!-- Home Page / Starting page -->
+<div data-role=page id=home  style="background-image:url(images/grass.jpg); min-height: 100%; height: 100%;">
+  <div data-role=header data-theme="b" data-position="fixed">
+    <h1>ASC Menu</h1>
+  </div>
+
+  <div data-role=content>
+    <!-- <p> Hier kommt bald das Menu </p> -->
+    <div class="ui-body ui-body-a ui-corner-all">
+      <table width=100%>
+      <tr>
+      <td width=70 valign=top>
+        <br />
+        <img src="ascavatar.png" width="100" />
+      </td>
+      <td>
+        <h3 style="text-align:center;">Welcome to the ASC</h3>
+        <p style="text-align:center; font-size:small;">Restaurant opening times:<p>
+        <p style="text-align:center; font-size:small;">
+          <b>Mon-Fri: 17:00-21:00<br />Sat: 12:00-18:00</b>
+        </p>
+      </td>
+      </tr>
+      </table>
+    </div>
+    <ul data-role="listview" data-inset="true" data-filter="true" data-input="#filter-for-listview">
+      <li><a href="#smalls" data-transition="flip">Something Small</a></li>
+      <li><a href="#salads" data-transition="flip">Salads</a></li>
+      <li><a href="#dinner" data-transition="flip">Dinner</a></li>
+      <li><a href="#sides" data-transition="flip">Side Orders</a></li>
+      <li><a href="#pizza" data-transition="flip">Pizza</a></li>
+    </ul>
+
+    <div class="ui-body ui-body-a ui-corner-all">
+      <p style="text-align:center;">
+      <a href="tel:+26464204284" data-role="button" class="ui-btn ui-icon-phone ui-btn-icon-left">Call to order</a>
+      <p>
+    </div>
+
+  </div>
+</div>
+
+<!-- Something Small Page -->
+<div data-role=page id=smalls style="background-image:url(images/grass.jpg); min-height: 100%; height: 100%;">
+  <div data-role=header data-add-back-btn=true data-theme="b" data-position="fixed">
+    <h1>Something Small</h1>
+    <a href="#home" class="ui-btn-right" data-transition="flip" data-icon="home" data-iconpos="notext" data-direction="reverse">Home</a>
+  </div>
+
+  <div data-role=content style="min-height: 100%; height: 100%;">
+    <div class="ui-body ui-body-a ui-corner-all">
+      <p><b>Not that hungry?</b> Try one of our smaller offers then, also perfect as a "bar lunch":</p>
+      <hr />
+      <table width=100% style="vertical-align:top;" cellspacing=0>
+        <thead>
+          <tr>
+            <th width=*></th>
+            <th width=10% align=right>N$</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>Meatballs</b><br />
+                (sel. days only) when available</td>
+            <td width=10% valign=top align=right>12.00</td>
+          </tr>
+          <tr bgcolor="F0F5F0">
+            <td><b>Chicken Drum Sticks</b><br />
+                (sel. days only) when available</td>
+            <td width=10% valign=top align=right>12.00</td>
+          </tr>
+          <tr>
+            <td><b>Soup Of The Day</b><br />
+                with toast<br />
+            <td width=10% valign=top align=right>30.00</td>
+          </tr>
+          <tr bgcolor="F0F5F0">
+            <td><b>Toasted Cheese & Ham</b></td>
+            <td width=10% valign=top align=right>20.00</td>
+          </tr>
+          <tr>
+            <td><b>Toasted Cheese & Ham & Tomato</b></td>
+            <td width=10% valign=top align=right>25.00</td>
+          </tr>
+          <tr bgcolor="F0F5F0">
+            <td><b>Toasted Mini Steak & Fried Onions</b></td>
+            <td width=10% valign=top align=right>30.00</td>
+          </tr>
+          <tr>
+            <td><b>Harley Toast</b><br />
+                (Steak, Onion, Egg)</td>
+            <td width=10% valign=top align=right>35.00</td>
+          </tr>
+          <tr bgcolor="F0F5F0">
+            <td><b>Vollies' Special</b><br />
+                (Patty, Onion, Egg, Cheese, Spice)</td>
+            <td width=10% valign=top align=right>40.00</td>
+          </tr>
+          <tr>
+            <td><b>Curry / Goulash & Rice / Spaghetti Bolognaise</b></td>
+            <td width=10% valign=top align=right>35.00</td>
+          </tr>
+          <tr bgcolor="F0F5F0">
+            <td><b>Auzzie Burger & Chips</b></td>
+            <td width=10% valign=top align=right>55.00</td>
+          </tr>
+        </tbody>
+      </table>
+      <br />
+      <hr />
+      <table width=100%>
+      <tr><td align=center><img src="images/bon-appetite.png" width=150px /></td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- Salads Page -->
+<div data-role=page id=salads style="background-image:url(images/grass.jpg); min-height: 100%; height: 100%;">
+  <div data-role=header data-add-back-btn=true data-theme="b" data-position="fixed">
+    <h1>Salads</h1>
+    <a href="#home" class="ui-btn-right" data-transition="flip" data-icon="home" data-iconpos="notext" data-direction="reverse">Home</a>
+  </div>
+
+  <div data-role=content>
+    <div class="ui-body ui-body-a ui-corner-all">
+      <p><b>Try our salads</b> - fresh and healthy:</p>
+      <hr />
+      <table width=100% style="vertical-align:top;" cellspacing=0>
+        <thead>
+          <tr>
+            <th width=*></th>
+            <th width=10% align=right>N$</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>Green Salad</b></td>
+            <td width=10% valign=top align=right>25.00</td>
+          </tr>
+          <tr bgcolor="F0F5F0">
+            <td><b>Greek Salad with Feta & Olives</b></td>
+            <td width=10% valign=top align=right>35.00</td>
+          </tr>
+          <tr>
+            <td><b>Greek Salad with Feta, Olives & Biltong</b></td>
+            <td width=10% valign=top align=right>55.00</td>
+          </tr>
+        </tbody>
+      </table>
+      <br />
+      <hr />
+      <table width=100%>
+      <tr><td align=center><img src="images/bon-appetite.png" width=150px /></td></tr>
+      </table>
+    </div>
+
+
+  </div>
+</div>
+
+<!-- Dinner page -->
+<div data-role=page id=dinner style="background-image:url(images/grass.jpg); min-height: 100%; height: 100%;">
+  <div data-role=header data-add-back-btn=true data-theme="b" data-position="fixed">
+    <h1>Dinner</h1>
+    <a href="#home" class="ui-btn-right" data-transition="flip" data-icon="home" data-iconpos="notext" data-direction="reverse">Home</a>
+  </div>
+
+  <div data-role=content>
+    <div class="ui-body ui-body-a ui-corner-all">
+      <p><b>Our Dinners</b> will fill you up just nicely:</p>
+      <hr />
+      <table width=100% style="vertical-align:top;" cellspacing=0>
+        <thead>
+          <tr>
+            <th width=*></th>
+            <th width=10% align=right>N$</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>Kassler</b><br />
+                with Mash & Rotkohl / Veggies</td>
+            <td width=10% valign=top align=right>70.00</td>
+          </tr>
+          <tr  bgcolor="F0F5F0">
+            <td><b>Crumbed Pork Chop</b><br />
+                with Chips & Salad / Veggies</td>
+            <td width=10% valign=top align=right>70.00</td>
+          </tr>
+          <tr>
+            <td><b>Traditional Fish & Chips</b><br />
+                or inst. of Chips: Veggies / Salad</b></td>
+            <td width=10% valign=top align=right>65.00</td>
+          </tr>
+          <tr  bgcolor="F0F5F0">
+            <td><b>Cordon Bleu</b><br />
+                with Chips & Salad / Veggies</b></td>
+            <td width=10% valign=top align=right>80.00</td>
+          </tr>
+          <tr><td colspan=2><hr></td></tr>
+          <tr>
+            <td><b>Ayoba Steak</b> (500g)<br />
+                with Chips & Salad / Veggies</td>
+            <td width=10% valign=top align=right>125.00</td>
+          </tr>
+          <tr  bgcolor="F0F5F0">
+            <td><b>Steak</b> (300g)<br />
+                with Chips & Salad/Veggies</td>
+            <td width=10% valign=top align=right>95.00</td>
+          </tr>
+          <tr>
+            <td><b>"Naked" Steak</b><br />
+                (300g - Steak <b>only</b>)</td>
+            <td width=10% valign=top align=right>60.00</td>
+          </tr>
+          <tr><td colspan=2><hr></td></tr>
+          <tr  bgcolor="F0F5F0">
+            <td><b>Schnitzel</b> (250g)<br />
+                with Chips & Salad / Veggies</td>
+            <td width=10% valign=top align=right>80.00</td>
+          </tr>
+          <tr>
+            <td><b>Schnitzel</b> (250g - Schnitzel <b>only</b>)<br />
+                <b>or Cordon Bleu</b> (<b>only</b>)</td>
+            <td width=10% valign=top align=right>45.00</td>
+          </tr>
+          <tr  bgcolor="F0F5F0">
+            <td><b>Footlong "Bockwurst" / Bratwurst</b><br />
+                with Chips & Salad</td>
+            <td width=10% valign=top align=right>60.00</td>
+          </tr>
+          <tr>
+            <td><b>Footlong</b> (<b>only</b>)</td>
+            <td width=10% valign=top align=right>35.00</td>
+          </tr>
+          <tr bgcolor="F0F5F0">
+            <td><b>"Bockwurst" / Bratwurst</b><br />
+                with Chips & Salad</td>
+            <td width=10% valign=top align=right>50.00</td>
+          </tr>
+          <tr>
+            <td><b>"Bockwurst" / Bratwurst</b> (<b>only</b>)</td>
+            <td width=10% valign=top align=right>25.00</td>
+          </tr>
+
+        </tbody>
+      </table>
+      <br />
+      <hr />
+      <p>
+      See also our <a href="#sides">Side Orders</a> to complement your meal
+      </p>
+      <hr />
+      <table width=100%>
+      <tr><td align=center><img src="images/bon-appetite.png" width=150px /></td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- Side Order Page -->
+<div data-role=page id=sides style="background-image:url(images/grass.jpg); min-height: 100%; height: 100%;">
+  <div data-role=header data-add-back-btn=true data-theme="b" data-position="fixed">
+    <h1>Side Orders</h1>
+    <a href="#home" class="ui-btn-right" data-transition="flip" data-icon="home" data-iconpos="notext" data-direction="reverse">Home</a>
+  </div>
+
+  <div data-role=content>
+    <div class="ui-body ui-body-a ui-corner-all">
+      <p><b>Side Orders</b> available to add to your meal:</p>
+      <hr />
+      <table width=100% style="vertical-align:top;" cellspacing=0>
+        <thead>
+          <tr>
+            <th width=*></th>
+            <th width=10% align=right>N$</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>Portion Chips</b></td>
+            <td width=10% valign=top align=right>25.00</td>
+          </tr>
+          <tr bgcolor="F0F5F0">
+            <td><b>Portion Spicy Garlic Chips</b></td>
+            <td width=10% valign=top align=right>35.00</td>
+          </tr>
+          <tr>
+            <td><b>Portion Potato Salad<br />
+                or Veggies or Beetroot</b></td>
+            <td width=10% valign=top align=right>20.00</td>
+          </tr>
+          <tr bgcolor="F0F5F0">
+            <td><b>Telleressen / Home Cooked Meal</b><br />
+                (when available)</td>
+            <td width=10% valign=top align=right>50.00</td>
+          </tr>
+        </tbody>
+      </table>
+      <br />
+      <hr />
+      <table width=100%>
+      <tr><td align=center><img src="images/bon-appetite.png" width=150px /></td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- Pizza Page -->
+<div data-role=page id=pizza style="background-image:url(images/grass.jpg); min-height: 100%; height: 100%;">
+  <div data-role=header data-add-back-btn=true data-theme="b" data-position="fixed">
+    <h1>Pizza</h1>
+    <a href="#home" class="ui-btn-right" data-transition="flip" data-icon="home" data-iconpos="notext" data-direction="reverse">Home</a>
+  </div>
+
+  <div data-role=content>
+    <div class="ui-body ui-body-a ui-corner-all">
+      <table width=100%>
+        <tr>
+          <td align=center>
+            <h3>Atlantis Pizza - Best Pizza in Town!</h3>
+            <hr />
+            <p>Our Tasty Pizza Base already comes with:</p>
+            <p><b>Italian Herbs, Tomato Paste, and Cheese</b></p>
+            <hr />
+            <h3>Step 1: Choose Your Pizza Size:</h3>
+            <hr>
+          </td>
+        </tr>
+      </table>
+      <table width=100% style="vertical-align:top;">
+        <thead>
+          <tr>
+            <th width=*></th>
+            <th width=10% align=right>N$</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>Medium Pizza</b><br />
+                (with any 3 toppings from below list included - unless marked "excl. med.")</td>
+            <td width=10% valign=top align=right>65.00</td>
+          </tr>
+          <tr>
+            <td><b>Large Pizza</b><br />
+                (exluding toppings - add from list below)</td>
+            <td width=10% valign=top align=right>60.00</td>
+          </tr>
+        </tbody>
+      </table>
+      <hr />
+      <table width=100%>
+        <tr>
+          <td align=center>
+            <h3>Step 2: Choose your toppings</h3>
+          <td>
+        <tr>
+      </table>
+      <hr />
+      <table width=100% style="vertical-align:top;" cellspacing=0>
+        <thead>
+          <tr>
+            <th width=*></th>
+            <th width=10% align=right>N$</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><b>Crushed Garlic</b></td>
+            <td width=10% valign=top align=right>5.00</td>
+          </tr>
+          <tr bgcolor="F0F5F0">
+            <td><b>Atjar</> (home made)</td>
+            <td width=10% valign=top align=right>5.00</td>
+          </tr>
+          <tr>
+            <td><b>Chilli</b></td>
+            <td width=10% valign=top align=right>5.00</td>
+          </tr>
+          <tr bgcolor="F0F5F0">
+            <td><b>Peppadew</b></td>
+            <td width=10% valign=top align=right>10.00</td>
+          </tr>
+          <tr>
+            <td><b>Green Peppers</b></td>
+            <td width=10% valign=top align=right>5.00</td>
+          </tr>
+          <tr bgcolor="F0F5F0">
+            <td><b>Onions</b></td>
+            <td width=10% valign=top align=right>5.00</td>
+          </tr>
+          <tr>
+            <td><b>Olives</b></td>
+            <td width=10% valign=top align=right>7.00</td>
+          </tr>
+          <tr  bgcolor="F0F5F0">
+            <td><b>Mushrooms</b></td>
+            <td width=10% valign=top align=right>7.00</td>
+          </tr>
+          <tr>
+            <td><b>Tomatoes</b></td>
+            <td width=10% valign=top align=right>5.00</td>
+          </tr>
+          <tr  bgcolor="F0F5F0">
+            <td><b>Pineapple</b></td>
+            <td width=10% valign=top align=right>7.00</td>
+          </tr>
+          <tr>
+            <td><b>Ham / Salami / Bacon</b></td>
+            <td width=10% valign=top align=right>12.00</td>
+          </tr>
+          <tr  bgcolor="F0F5F0">
+            <td><b>Mince</b> (excl. med.)</td>
+            <td width=10% valign=top align=right>15.00</td>
+          </tr>
+          <tr>
+            <td><b>Cheese / Feta / Mozarella</b></td>
+            <td width=10% valign=top align=right>15.00</td>
+          </tr>
+          <tr bgcolor="F0F5F0">
+            <td><b>Mixed Seafood</b> (excl. med.)<br />
+                (when available)</td>
+            <td width=10% valign=top align=right>45.00</td>
+          </tr>
+          <tr>
+            <td><b>Steak Strips</b> (excl. med.)</td>
+            <td width=10% valign=top align=right>60.00</td>
+          </tr>
+          <tr bgcolor="F0F5F0">
+            <td><b>Schnitzel Strips</b> (excl. med.)</td>
+            <td width=10% valign=top align=right>45.00</td>
+          </tr>
+          <tr>
+            <td><b>Double Decker / Triple Decker</b></td>
+            <td width=20% valign=top align=right>(on req.)</td>
+          </tr>
+          <tr bgcolor="F0F5F0">
+            <td><b>Biltong</b></td>
+            <td width=10% valign=top align=right>20.00</td>
+          </tr>
+
+
+        </tbody>
+      </table>
+      <br />
+      <hr />
+      <table width=100%>
+      <tr><td align=center><img src="images/bon-appetite.png" width=150px /></td></tr>
+      </table>
+
+    </div>
+  </div>
+</div>
+
+ </body>
+</html>
